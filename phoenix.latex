@@ -1,0 +1,162 @@
+\documentclass[a4paper]{article}
+
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+
+\setlength{\parindent}{0pt}
+
+\usepackage{titlesec}
+\titlespacing*{\section}
+{0pt}{2ex}{0ex}
+\titlespacing*{\subsection}
+{0pt}{2ex}{0ex} 
+
+\usepackage{mathpazo}
+
+$if(title)$
+  \title{$title$}
+$endif$
+
+$if(subtitle)$
+  \providecommand{\subtitle}[1]{}
+  \subtitle{$subtitle$}
+$endif$
+
+$if(author)$
+  \author{$for(author)$$author$$sep$ \and $endfor$}
+$endif$
+
+$if(colorlinks)$
+  \PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
+$endif$
+
+\date{$date$}
+
+% ============================================================================
+% Section numbering
+% ============================================================================
+$if(numbersections)$
+  \setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
+$else$
+  \setcounter{secnumdepth}{0}
+$endif$
+
+% =============================================================================
+% Margins
+% =============================================================================
+% The default values are set to:
+%      1.25cm
+% 2cm          2cm
+%      1.25cm
+$if(margin)$
+  \usepackage[
+    $for(margin)$
+      $if(margin.top)$
+        top=$margin.top$,
+      $else$
+        top=1.25cm,
+      $endif$
+      $if(margin.right)$
+        right=$margin.right$,
+      $else$
+        right=2cm,
+      $endif$
+      $if(margin.bottom)$
+        bottom=$margin.bottom$,
+      $else$
+        bottom=1.25cm,
+      $endif$
+      $if(margin.left)$
+        left=$margin.left$,
+      $else$
+        left=2cm,
+      $endif$
+    $endfor$
+    headheight=17pt,includehead,includefoot
+  ]{geometry}
+$else$
+\usepackage[top=1.25cm,right=2cm,bottom=1.25cm,left=2cm,headheight=17pt,includehead,includefoot]{geometry}
+$endif$
+
+% =============================================================================
+% Header / Footer
+% =============================================================================
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+$if(header)$
+  $for(header)$
+    $if(header.left)$
+      \fancyhead[LO,LE]{\rule[-2ex]{0pt}{0ex}$header.left$}
+    $endif$
+    $if(header.center)$
+    \fancyhead[CO,CE]{\textbf{$header.center$}}
+    $endif$
+    $if(header.right)$
+      \fancyhead[RO,RE]{$header.right$}
+    $endif$
+  $endfor$
+$endif$
+$if(footer)$
+  \usepackage{lastpage}
+  $for(footer)$
+    $if(footer.left)$
+      \fancyfoot[LO,LE]{$footer.left$}
+    $else$
+      \fancyfoot[LO,LE]{$for(author)$$author$$sep$ \and $endfor$}
+    $endif$
+    $if(footer.center)$
+      \fancyfoot[CO,CE]{$footer.center$}
+    $else$
+      \fancyfoot[CO,CE]{}
+    $endif$
+    $if(footer.right)$
+      \fancyfoot[RO,RE]{$footer.right$}
+    $else$
+      \fancyfoot[RO,RE]{\thepage \ / \pageref{LastPage}}
+    $endif$
+  $endfor$
+$endif$
+
+\begin{document}
+  $if(titlepage)$
+    $if(title)$
+    \maketitle
+    \thispagestyle{empty}
+    \clearpage
+    \setcounter{page}{1}
+    $endif$
+  $endif$
+
+  $if(toc)$
+    {
+    $if(colorlinks)$
+      \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$$endif$}
+    $endif$
+      \setcounter{tocdepth}{$toc-depth$}
+      \tableofcontents
+    }
+  $endif$
+
+  $if(lot)$
+    \listoftables
+  $endif$
+  
+  $if(lof)$
+  \listoffigures
+  $endif$
+
+  $body$
+
+  $if(biblatex)$
+    \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+  $endif$
+
+  $for(includeafter)$
+  $includeafter$
+
+  $endfor$
+\end{document}
