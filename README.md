@@ -13,6 +13,8 @@ phoenix` argument. The most basic pandoc command hence looks like this:
 pandoc xxx.md -o xxx.pdf --template phoenix
 ```
 
+![Example output](https://github.com/mariuskiessling/phoenix-template/blob/master/example.png)
+
 ### Parameters
 The template provides some variables you can set inside the YAML meta data
 block. The block is surrounded by `---` and can be located anywhere inside your
