@@ -54,6 +54,10 @@ corner. This behavior can be overwritten by providing a list of values that
 specify the content of the footer. The list consists out of the keys `left`,
 `center`, `right`.
 
+**`margin`**: If no margin option is supplied the default margins (top &
+bottom: 1.25cm, left & right: 2cm) are used. They can be overwritten by
+supplying a list consisting of the keys `top`, `right`, `bottom`, `left`. The values provided in the list have to include a valid LaTeX unit.
+
 ## Trivia
 The name of this project is derived from the old _Phoenix_ coal mining area
 inside my hometown that is now partially rebuild and repurposed; something old
