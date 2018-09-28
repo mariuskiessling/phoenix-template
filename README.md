@@ -59,6 +59,11 @@ bottom: 1.25cm, left & right: 2cm) are used. They can be overwritten by
 supplying a list consisting of the keys `top`, `right`, `bottom`, `left`. The
 values provided in the list have to include a valid LaTeX unit.
 
+**`preamble`** (list): The list supplied under this keyword is included at the
+end of the preamble and right before the content of the document. You can
+include your own valid LaTeX commands here if need to specify any needed
+packages or overwrite the default template behavior.
+
 ## Trivia
 The name of this project is derived from the old _Phoenix_ coal mining area
 inside my hometown that is now partially rebuild and repurposed; something old
