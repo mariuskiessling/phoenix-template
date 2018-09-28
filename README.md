@@ -34,32 +34,38 @@ header:
 
 ---
 
-**`title`**: Set the title displayed on the title page and PDF meta data
+**`title`** (_default_: empty): Set the title displayed on the title page and
+PDF meta data
 
-**`author`**: Set the author displayed on the title page and PDF meta data
+**`author`** (_default_: empty): Set the author displayed on the title page and
+PDF meta data
 
-**`date`**: Set the date displayed on the title page
+**`date`** (_default_: empty): Set the date displayed on the title page
 
-**`titlepage`** (_yes_ or _no_): Enable or disable the title page
+**`titlepage`** (_yes_ or _no_; _default_: _no_): Enable or disable the title
+page
 
-**`colorlinks`**: (_yes_ or _no_): Enable or disable colorful links
+**`colorlinks`**: (_yes_ or _no_; _default_: _no_): Enable or disable colorful
+links
 
-**`header`** (list): `left`, `center`, `right` keys specify the values
-displayed in the corresponding location.
+**`header`** (list; _default_: no header): `left`, `center`, `right` keys
+specify the values displayed in the corresponding location.
 
-**`footer`** (_yes_ or _no_ or list): If a boolean is given the footer is
-displayed or hidden. If the boolean simply set to _yes_ the footer displays the
-author(s) in the lower left corner and the current page in the lower right
-corner. This behavior can be overwritten by providing a list of values that
-specify the content of the footer. The list consists out of the keys `left`,
-`center`, `right`.
+**`footer`** (_yes_ or _no_ or list; _default_: no footer): If a boolean is
+given the footer is displayed or hidden. If the boolean simply set to _yes_ the
+footer displays the author(s) in the lower left corner and the current page in
+the lower right corner. This behavior can be overwritten by providing a list of
+values that specify the content of the footer. The list consists out of the
+keys `left`, `center`, `right`.
 
-**`margin`**: If no margin option is supplied the default margins (top &
-bottom: 1.25cm, left & right: 2cm) are used. They can be overwritten by
-supplying a list consisting of the keys `top`, `right`, `bottom`, `left`. The
-values provided in the list have to include a valid LaTeX unit.
+**`margin`** (_default_: see description): If no margin option is supplied the
+default margins (top & bottom: 1.25cm, left & right: 2cm) are used. They can be
+overwritten by supplying a list consisting of the keys `top`, `right`,
+`bottom`, `left`. The values provided in the list have to include a valid LaTeX
+unit.
 
-**`preamble`** (list): The list supplied under this keyword is included at the
+**`preamble`** (list; _default_: no commands): The list supplied under this
+keyword is included at the
 end of the preamble and right before the content of the document. You can
 include your own valid LaTeX commands here if need to specify any needed
 packages or overwrite the default template behavior.
