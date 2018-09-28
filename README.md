@@ -1,7 +1,7 @@
 # Phoenix - a simple template for markdown documents and pandoc
 
 ## Setup
-1. Install `pandoc` for your platform.
+1. Install [pandoc](https://pandoc.org/) for your platform.
 2. Place the `phoenix.latex` file inside the `~/.pandoc/templates` directory
    (create the directory if it does not exist yet).
 
@@ -10,7 +10,7 @@ You can tell pandoc to use the `phoenix` template using the `--template
 phoenix` argument. The most basic pandoc command hence looks like this:
 
 ```
-pandoc xxx.md -o xxx.pdf --template phoenix
+pandoc example.md -o example.pdf --template phoenix
 ```
 
 ![Example output](https://github.com/mariuskiessling/phoenix-template/blob/master/example.png)
@@ -56,7 +56,8 @@ specify the content of the footer. The list consists out of the keys `left`,
 
 **`margin`**: If no margin option is supplied the default margins (top &
 bottom: 1.25cm, left & right: 2cm) are used. They can be overwritten by
-supplying a list consisting of the keys `top`, `right`, `bottom`, `left`. The values provided in the list have to include a valid LaTeX unit.
+supplying a list consisting of the keys `top`, `right`, `bottom`, `left`. The
+values provided in the list have to include a valid LaTeX unit.
 
 ## Trivia
 The name of this project is derived from the old _Phoenix_ coal mining area
