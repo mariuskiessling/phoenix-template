@@ -5,6 +5,7 @@
 \usepackage{textcomp}
 
 \setlength{\parindent}{0pt}
+\usepackage[parfill]{parskip}
 
 \usepackage{titlesec}
 \titlespacing*{\section}
