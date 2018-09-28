@@ -13,8 +13,6 @@
 \titlespacing*{\subsection}
 {0pt}{2ex}{0ex} 
 
-\usepackage{mathpazo}
-
 $if(title)$
   \title{$title$}
 $endif$
@@ -120,6 +118,12 @@ $if(footer)$
       \fancyfoot[RO,RE]{\thepage \ / \pageref{LastPage}}
     $endif$
   $endfor$
+$endif$
+
+$if(defaultfont)$
+  \renewcommand{\familydefault}{cmr}
+$else$
+  \usepackage[default,osfigures,scale=0.95]{opensans}
 $endif$
 
 % =============================================================================

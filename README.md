@@ -45,8 +45,13 @@ PDF meta data
 **`titlepage`** (_yes_ or _no_; _default_: _no_): Enable or disable the title
 page
 
-**`colorlinks`**: (_yes_ or _no_; _default_: _no_): Enable or disable colorful
+**`colorlinks`** (_yes_ or _no_; _default_: _no_): Enable or disable colorful
 links
+
+**`defaultfont`** (_yes_ or _no_; _default_: _no_): Set to _yes_ if the
+document font should be set to Computer Modern. If set to _no_ Open Sans will
+be used as a default. This behavior can be overwritten by the `preamble`
+keyword.
 
 **`header`** (list; _default_: no header): `left`, `center`, `right` keys
 specify the values displayed in the corresponding location.
