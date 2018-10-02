@@ -7,6 +7,8 @@
 \setlength{\parindent}{0pt}
 \usepackage[parfill]{parskip}
 
+\usepackage{graphicx}
+
 \usepackage{titlesec}
 \titlespacing*{\section}
 {0pt}{2ex}{0ex}
