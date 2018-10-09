@@ -9,6 +9,9 @@
 
 \usepackage{graphicx}
 
+\usepackage{longtable}
+\usepackage{booktabs}
+
 \usepackage{titlesec}
 \titlespacing*{\section}
 {0pt}{2ex}{0ex}
@@ -31,6 +34,9 @@ $endif$
 $if(colorlinks)$
   \PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
 $endif$
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \date{$date$}
 
