@@ -94,10 +94,13 @@ $endif$
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{0.5pt}
 
+% Add default empty margin to upper left header field (overwritten if set)
+\fancyhead[LO,LE]{\rule[-1ex]{0pt}{0ex} }
+
 $if(header)$
   $for(header)$
     $if(header.left)$
-      \fancyhead[LO,LE]{\rule[-2ex]{0pt}{0ex}$header.left$}
+      \fancyhead[LO,LE]{\rule[-1ex]{0pt}{0ex}$header.left$}
     $endif$
     $if(header.center)$
     \fancyhead[CO,CE]{\textbf{$header.center$}}
