@@ -3,11 +3,13 @@
 \usepackage{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
+\usepackage{amssymb}
 
 \setlength{\parindent}{0pt}
 \usepackage[parfill]{parskip}
 
 \usepackage{graphicx}
+\setkeys{Gin}{width=0.90\linewidth}
 
 \usepackage{longtable}
 \usepackage{booktabs}
