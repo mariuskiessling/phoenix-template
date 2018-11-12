@@ -1,4 +1,8 @@
-\documentclass[a4paper]{article}
+$if(fontsize)$
+  \documentclass[$fontsize$,a4paper]{article}
+$else$
+  \documentclass[a4paper]{article}
+$endif$
 
 \usepackage{hyperref}
 \usepackage[utf8]{inputenc}

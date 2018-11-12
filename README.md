@@ -75,6 +75,8 @@ end of the preamble and right before the content of the document. You can
 include your own valid LaTeX commands here if need to specify any needed
 packages or overwrite the default template behavior.
 
+**`fontsize`** (_default_: not set): Sets the font size of the document. This includes the header and footer thus only use this option if it is really needed. 
+
 ## Trivia
 The name of this project is derived from the old _Phoenix_ coal mining area
 inside my hometown that is now partially rebuild and repurposed; something old
