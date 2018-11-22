@@ -15,6 +15,10 @@ $endif$
 \usepackage{graphicx}
 \setkeys{Gin}{width=0.90\linewidth}
 
+% Update default floating positioning of figures to be always inline
+\usepackage{float}
+\floatplacement{figure}{H}
+
 \usepackage{longtable}
 \usepackage{booktabs}
 
