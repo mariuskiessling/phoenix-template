@@ -8,6 +8,10 @@ $endif$
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
 \usepackage{amssymb}
+\usepackage{babel}
+
+% Allow multiline printing for hyphenated words
+\def\hyph{-\penalty0\hskip0pt\relax}
 
 \setlength{\parindent}{0pt}
 \usepackage[parfill]{parskip}
@@ -126,7 +130,7 @@ $if(footer)$
     $if(footer.left)$
       \fancyfoot[LO,LE]{$footer.left$}
     $else$
-      \fancyfoot[LO,LE]{$for(author)$$author$$sep$ \and $endfor$}
+      \fancyfoot[LO,LE]{$footer.left$ $for(author)$$author$ $endfor$}
     $endif$
     $if(footer.center)$
       \fancyfoot[CO,CE]{$footer.center$}
