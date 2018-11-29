@@ -1,7 +1,7 @@
 $if(fontsize)$
-  \documentclass[$fontsize$,a4paper]{article}
+  \documentclass[$fontsize$,a4paper,ngerman]{article}
 $else$
-  \documentclass[a4paper]{article}
+  \documentclass[a4paper,ngerman]{article}
 $endif$
 
 \usepackage{hyperref}
