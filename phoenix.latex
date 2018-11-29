@@ -13,6 +13,8 @@ $endif$
 % Allow multiline printing for hyphenated words
 \def\hyph{-\penalty0\hskip0pt\relax}
 
+\setlength{\skip\footins}{0.8cm}
+
 \setlength{\parindent}{0pt}
 \usepackage[parfill]{parskip}
 
